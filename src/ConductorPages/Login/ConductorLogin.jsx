@@ -19,7 +19,7 @@ function ConductorLogin() {
 
         <div className="checkbox mb-3 text-start">
           <label>
-            <input type="checkbox" value="remember-me"/>Remember</label>
+            <input type="checkbox" value="remember-me"/>Remember Me</label>
         </div>
         <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in !!</button>
       </form>
