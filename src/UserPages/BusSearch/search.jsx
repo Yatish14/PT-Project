@@ -13,10 +13,19 @@ function SearchBus()
             <button>Search</button>
             </div>
             <div className="recent_search">
+                <br />
                 <h5>Recent Searches</h5>
-                <p>From - To <br />
-                   Kandigai - Tambaram
-                </p>
+                <table>
+                    <tr>
+                        <th>From</th>
+                        <th>To</th>
+                    </tr>
+                    <tr>
+                        <td>Kandigai</td>
+                        <td>Tambaram</td>
+                    </tr>
+                    <br />
+                </table>
             </div>
             <div className="bus_details">
                 <h5>Kandigai - Tambaram</h5>
