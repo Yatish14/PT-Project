@@ -28,7 +28,8 @@ function SearchBus()
                 </table>
             </div>
             <div className="bus_details">
-                <h5>Kandigai - Tambaram</h5>
+
+                <h5>Kandigai - Tambaram </h5>
                 <p>
                     Depot Name : Tambaram
                     <br />
