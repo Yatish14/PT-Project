@@ -1,7 +1,11 @@
 import React from "react";
 import './search.css'
+import {AiFillStar} from 'react-icons/ai'
+import { useState } from "react";
 function SearchBus()
 {
+    const [isClicked,setisClicked] = useState(false);
+
     return(
         <div className="search_page">
             <div className='location_search'>
@@ -13,22 +17,25 @@ function SearchBus()
             <button>Search</button>
             </div>
             <div className="recent_search">
-                <br />
+                
                 <h5>Recent Searches</h5>
                 <table>
-                    <tr>
-                        <th>From</th>
-                        <th>To</th>
-                    </tr>
-                    <tr>
-                        <td>Kandigai</td>
-                        <td>Tambaram</td>
-                    </tr>
-                    <br />
+                    <thead>
+                        <tr>
+                            <th>From</th>
+                            <th>To</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kandigai</td>
+                            <td>Tambaram</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <div className="bus_details">
-
+                <AiFillStar className={ isClicked ? `starIconActive starIcon` :`starIcon` } onClick={()=>setisClicked(!isClicked)} />
                 <h5>Kandigai - Tambaram </h5>
                 <p>
                     Depot Name : Tambaram
@@ -42,5 +49,6 @@ function SearchBus()
     
     )
 }
+
 
 export default SearchBus

@@ -27,6 +27,8 @@
     width : 350px;
     height: 20vh;
     border: 2px solid gray;
+    position: fixed;
+    bottom: 300px;
 }
 .dep_time,.arr_time
 {
@@ -46,4 +48,16 @@ th,td
     border: 1px solid #dddddd;
     text-align: center;
     padding: 8px;
+}
+.starIcon
+{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: x-large;
+    color: rgba(94, 94, 94, 0.711);
+}
+.starIconActive
+{
+    color: red;
 }
