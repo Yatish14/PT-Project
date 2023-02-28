@@ -1,18 +1,64 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './search.css'
-function SearchBus()
-{
-    return(
+import SearchLoop from "./SearchLoop";
+
+function SearchBus() {
+    const [showSearch, SetShowSearch] = useState(true)
+    const [showBuses, setShowBuses] = useState(false)
+    const busesList = [ {
+        id : 0,
+        start : "Tambaram",
+        destination : "Kellambakam",
+        departure : "3:10pm",
+        arrvial : "3:50pm"
+    },
+    {
+        id : 1,
+        start : "Tambaram",
+        destination : "Kellambakam",
+        departure : "3:10pm",
+        arrvial : "3:50pm"
+    },
+    {
+        id : 2,
+        start : "Tambaram",
+        destination : "Kellambakam",
+        departure : "3:10pm",
+        arrvial : "3:50pm"
+    },
+    {
+        id : 3,
+        start : "Tambaram",
+        destination : "Kellambakam",
+        departure : "3:10pm",
+        arrvial : "3:50pm"
+    },
+    {
+        id : 4,
+        start : "Tambaram",
+        destination : "Kellambakam",
+        departure : "3:10pm",
+        arrvial : "3:50pm"
+    }]
+    const [buses, setBuses] = useState(busesList)
+
+    const HandelClick = () => {
+        SetShowSearch(false)
+        setShowBuses(true)
+    }
+
+    return (
         <div className="search_page">
             <div className='location_search'>
-            <h2>Search Buses</h2>
-            <p>From</p>
-            <input type="text" placeholder="Select From Location"></input>
-            <p>To</p>
-            <input type="text" placeholder="Select To Location"></input>
-            <button>Search</button>
+                <h2>Search Buses</h2>
+                <p>From</p>
+                <input type="text" placeholder="Select From Location"></input>
+                <p>To</p>
+                <input type="text" placeholder="Select To Location"></input>
+                <button onClick = {HandelClick}>Search</button>
             </div>
-            <div className="recent_search">
+            {
+                showSearch && (<div className="recent_search">
                 <br />
                 <h5>Recent Searches</h5>
                 <table>
@@ -26,20 +72,13 @@ function SearchBus()
                     </tr>
                     <br />
                 </table>
-            </div>
-            <div className="bus_details">
-
-                <h5>Kandigai - Tambaram </h5>
-                <p>
-                    Depot Name : Tambaram
-                    <br />
-                    Scheduled Departure <span className="dep_time">3:10pm</span>
-                    <br />
-                    Scheduled Arrival <span className="arr_time">3:55pm</span>
-                </p>
-            </div>
+            </div>)
+            }
+            {
+                showBuses && (buses.map((value, key) => (<SearchLoop key = {key} bus = {value} />)))
+            }
         </div>
-    
+
     )
 }
 
