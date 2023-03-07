@@ -1,0 +1,49 @@
+.search_page
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.location_search
+{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* align-items: flex-start; */
+    flex-direction: column;
+}
+.location_search button
+{
+   margin-top: 10px;
+}
+.recent_search
+{
+    margin: 5px;
+}
+.bus_details
+{
+    margin: 0px 15px 0px 10px;
+    padding: 5px;
+    width : 350px;
+    height: 20vh;
+    border: 2px solid gray;
+}
+.dep_time,.arr_time
+{
+    color: gray;
+    padding-right: 5px;
+    float: right;
+}
+table
+{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th,td
+{
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
