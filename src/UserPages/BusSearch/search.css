@@ -1,8 +1,18 @@
+*
+{
+    background-color: lightblue;
+}
 .search_page
 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 10px;
+}
+.searchBusesHeading
+{
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 .location_search
 {
@@ -11,6 +21,47 @@
     justify-content: center;
     /* align-items: flex-start; */
     flex-direction: column;
+}
+.inputLabelfrom
+{
+    font-size: 20px;
+    font-weight: bold;
+    transform: translateX(-152px);
+}
+.inputLabelto
+{
+    font-size: 20px;
+    font-weight: bold;
+    transform: translateX(-164px);
+}
+.fromInput,.toInput
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    height: 40px;
+}
+.fromInput:focus,.toInput:focus
+{
+    outline: black;
+    border-color: blue;
+}
+.submitbtn
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: x-large;
+    border-radius: 10px;
+    /* box-shadow: 2px solid black; */
+}
+.recentSearches
+{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 .location_search button
 {
@@ -27,8 +78,7 @@
     width : 350px;
     height: 20vh;
     border: 2px solid gray;
-    position: fixed;
-    bottom: 300px;
+    margin-bottom: 10px;
 }
 .dep_time,.arr_time
 {
@@ -45,17 +95,19 @@ table
   
 th,td
 {
-    border: 1px solid #dddddd;
+    border: 1px solid black;
     text-align: center;
     padding: 8px;
 }
 .starIcon
 {
-    position: absolute;
+    position: relative;
     top: 5px;
     right: 5px;
-    font-size: x-large;
+    font-size: large;
     color: rgba(94, 94, 94, 0.711);
+    left: 250px;
+    transform: translateY(20px);
 }
 .starIconActive
 {
