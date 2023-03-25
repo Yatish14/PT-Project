@@ -1,7 +1,7 @@
-*
+/* *
 {
-    background-color: lightblue;
-}
+    background-image: linear-gradient(45deg,#85ffbd 0%,#fffb7d 100%);
+} */
 .search_page
 {
     display: flex;
@@ -12,7 +12,8 @@
 .searchBusesHeading
 {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: xx-large;
     /* hi sesank */
 }
 .location_search
@@ -41,6 +42,8 @@
     margin-right: 10px;
     margin-bottom: 15px;
     height: 40px;
+    outline: black;
+    border-color: black;
 }
 .fromInput:focus,.toInput:focus
 {
@@ -62,7 +65,7 @@
 {
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .location_search button
 {
@@ -72,14 +75,21 @@
 {
     margin: 5px;
 }
+.availableBusesHeading
+{
+    margin-top: 10px;
+    transform: translateX(12px);
+    font-size: x-large;
+    font-weight: bold;
+}
 .bus_details
 {
     margin: 0px 15px 0px 10px;
     padding: 5px;
     width : 350px;
-    height: 20vh;
-    border: 2px solid gray;
-    margin-bottom: 10px;
+    height: 18vh;
+    border: 2px solid black;
+    margin-bottom: 15px;
 }
 .dep_time,.arr_time
 {

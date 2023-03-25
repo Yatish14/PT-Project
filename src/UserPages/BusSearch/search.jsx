@@ -79,7 +79,8 @@ function SearchBus() {
             </div>)
             }
             {
-                showBuses && (buses.map((value, key) => (<SearchLoop key = {key} bus = {value} />)))
+                showBuses && (<div><p className="availableBusesHeading">Available Buses</p>
+                {buses.map((value, key) => (<SearchLoop key = {key} bus = {value} />))}</div> )
             }
         </div>
 
